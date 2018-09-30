@@ -1,0 +1,23 @@
+.Header {
+  background: #38d9a9;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .title {
+    color: white;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  .right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-right: 1rem;
+  }
+}
