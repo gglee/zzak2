@@ -1,11 +1,16 @@
 import React from 'react';
 import HideHeader from 'components/base/HideHeader';
+import AuthTemplate from 'components/auth/AuthTemplate';
 
-const AuthPage = () => (
-  <div>
-    <HideHeader />
-    인증
-  </div>
-);
+const AuthPage = ({ match }) => {
+  const { authType } = match.params;
+  return (
+    <div>
+      <AuthTemplate type={authType}>
+        <HideHeader />
+      </AuthTemplate>
+    </div>
+  );
+};
 
 export default AuthPage;

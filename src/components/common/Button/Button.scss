@@ -1,0 +1,41 @@
+.Button {
+  // 그냥 기본 스타일
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  &:hover {
+    background: #f8f9fa;
+  }
+  // 테두리로 이뤄진 버튼
+  &.outline {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    &:hover {
+      background: white;
+      color: #38d9a9;
+    }
+  }
+  // 청록색 버튼
+  &.active {
+    background: #38d9a9;
+    color: white;
+    &:hover {
+      background: #63e6be;
+    }
+  }
+}
+
+// 버튼 사이 여백
+.Button + .Button {
+  margin-left: 1rem;
+}
