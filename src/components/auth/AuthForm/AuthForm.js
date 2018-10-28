@@ -9,9 +9,10 @@ class AuthForm extends Component {
     fields: {
       username: '',
       password: '',
-      passwordComfirm: '',
+      passwordConfirm: '',
     },
   };
+
   handleKeyPress = e => {
     // 엔터 입력 시 props로 전달 받은 onSubmit 함수 호출
     this.props.onSubmit();
@@ -26,12 +27,12 @@ class AuthForm extends Component {
       onSubmit,
       error,
     } = this.props;
-    const { username, password, passwordComfirm } = fields;
+    const { username, password, passwordConfirm } = fields;
 
     return (
       <div className="AuthForm">
         {error && <div className="error">{error}</div>}
-        <div class="inputs">
+        <div className="inputs">
           <input
             name="username"
             placeholder="계정명"
