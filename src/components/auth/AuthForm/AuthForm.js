@@ -50,11 +50,11 @@ class AuthForm extends Component {
           />
           {register && (
             <input
-              name="passwordComfirm"
+              name="passwordConfirm"
               type="password"
               placeholder="비밀번호 다시 입력"
               onChange={onChange}
-              value={passwordComfirm}
+              value={passwordConfirm}
               onKeyPress={this.handleKeyPress}
             />
           )}
