@@ -6,6 +6,7 @@ import './AuthForm.scss';
 class AuthForm extends Component {
   // fields가 없을 떄 튕기지 않도록 defaultProps 설정
   static defaultProps = {
+    // unexpected token error 수정 중...
     fields: {
       username: '',
       password: '',
