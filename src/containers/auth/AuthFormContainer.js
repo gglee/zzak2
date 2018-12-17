@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import AuthForm from 'components/auth/AuthForm';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose, bindActionCreators } from 'redux';
+import AuthForm from 'components/auth/AuthForm';
 import * as authActions from 'store/modules/auth';
 
 class AuthFormContainer extends Component {
   componentDidMount() {
     // 폼 정보 초기화
     const { AuthActions } = this.props;
-    AuthActions.initalize();
+    AuthActions.initialize();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -17,7 +17,7 @@ class AuthFormContainer extends Component {
     // 회원가입 <-> 로그인
     if (prevProps.type !== this.props.type) {
       const { AuthActions } = this.props;
-      authActions.initialize();
+      AuthActions.initialize();
     }
   }
 
@@ -25,7 +25,6 @@ class AuthFormContainer extends Component {
     // e.target에서 인풋의 변화 정보를 가져오고
     const { name, value } = e.target;
     // 액션을 발생시켜 리덕스의 상태를 업데이트 합니다.
-    // 여기선 컴포넌트의 state를 사용해도 됩니다.
     const { AuthActions } = this.props;
     AuthActions.changeInput({
       field: name,

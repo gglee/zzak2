@@ -9,6 +9,7 @@ const AuthPage = ({ match }) => {
     <div>
       <AuthTemplate type={authType}>
         <HideHeader />
+        <AuthFormContainer type={authType} />
       </AuthTemplate>
     </div>
   );
