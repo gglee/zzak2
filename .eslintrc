@@ -16,7 +16,8 @@
     "no-unused-vars": 1,
     "react/button-has-type": 0,
     "no-underscore-dangle": 0,
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "import/prefer-default-export": 1
   },
   "env": {
     "browser": true,

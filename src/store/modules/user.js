@@ -1,4 +1,11 @@
 import { createAction, handleActions } from 'redux-actions';
+import immer from 'immer';
+import { applyPenders } from 'redux-pender';
+import * as AuthApi from 'lib/api/auth';
+
+const CHECK_AUTH = 'user/CHECK_AUTH';
+
+export const checkAuth = createAction(CHECK_AUTH, AuthApi.checkAuth);
 
 const initialState = {
   user: null, // 유저정보
@@ -7,4 +14,9 @@ const initialState = {
 
 const reducer = handleActions({}, initialState);
 
-export default reducer;
+export default applyPenders(reducer, [
+  {
+    type: CHECK_AUTH,
+    // onSuccess:
+  },
+]);
